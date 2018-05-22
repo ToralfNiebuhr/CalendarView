@@ -61,7 +61,7 @@ class DayView: UIView {
     updateView()
   }
 
-  func onSelected(_ notification: Notification) {
+  @objc func onSelected(_ notification: Notification) {
     if let date = date, let nsDate = notification.object as? Date {
       let mo = moment(nsDate)
       if mo.month != date.month || mo.day != date.day {
@@ -86,7 +86,7 @@ class DayView: UIView {
     }
   }
 
-  func select() {
+  @objc func select() {
     selected = true
   }
 

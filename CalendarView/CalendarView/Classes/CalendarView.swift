@@ -120,7 +120,7 @@ open class CalendarView: UIView {
         contentView.contentOffset.x = contentView.frame.width
     }
     
-    func dateSelected(_ notification: Notification) {
+    @objc func dateSelected(_ notification: Notification) {
         guard let date = notification.object as? Date else { return }
         delegate?.calendarDidSelectDate(moment(date))
     }

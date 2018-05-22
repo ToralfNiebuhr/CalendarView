@@ -25,14 +25,10 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/n8armstrong/CalendarView.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/N8armstrong'
 
-  s.platform     = :ios, '9.0'
+  s.platform     = :ios, '11.0'
   s.requires_arc = true
 
   s.source_files = 'CalendarView/CalendarView/Classes/**/*'
-  s.resource_bundles = {
-    'CalendarView' => ['Pod/Assets/*.png']
-  }
-
   s.frameworks = 'UIKit'
-  s.dependency 'SwiftMoment', '~> 0.6'
+  s.dependency 'SwiftMoment', '~> 0.7'
 end
