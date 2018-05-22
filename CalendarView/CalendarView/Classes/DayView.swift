@@ -33,7 +33,9 @@ class DayView: UIView {
       if selected {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: CalendarSelectedDayNotification), object: date.toDate())
       }
-      updateView()
+        DispatchQueue.main.async { [weak self] in
+            self?.updateView()
+        }
     }
   }
 
